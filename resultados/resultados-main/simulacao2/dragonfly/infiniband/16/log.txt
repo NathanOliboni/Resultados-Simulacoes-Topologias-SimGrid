@@ -1,0 +1,8 @@
+File /home/ubuntu/resultados/simulacao2/dragonfly/infiniband/16/scatter_dragonfly_infiniband_16.trace
+
+
+Warnings :
+1 : the definition is not identified
+2 : the definition is not identified
+
+Your trace has 0 errors and 2 warnings.

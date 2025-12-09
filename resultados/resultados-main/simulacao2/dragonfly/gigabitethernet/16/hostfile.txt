@@ -1,0 +1,16 @@
+node0.simgrid.org
+node1.simgrid.org
+node2.simgrid.org
+node3.simgrid.org
+node4.simgrid.org
+node5.simgrid.org
+node6.simgrid.org
+node7.simgrid.org
+node8.simgrid.org
+node9.simgrid.org
+node10.simgrid.org
+node11.simgrid.org
+node12.simgrid.org
+node13.simgrid.org
+node14.simgrid.org
+node15.simgrid.org

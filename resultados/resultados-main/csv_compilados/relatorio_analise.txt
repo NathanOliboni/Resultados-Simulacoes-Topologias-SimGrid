@@ -1,0 +1,734 @@
+================================================================================
+RELATÓRIO DE ANÁLISE DE LOGS MPI
+================================================================================
+
+Total de configurações analisadas: 192
+
+
+================================================================================
+1. ESTATÍSTICAS BÁSICAS
+================================================================================
+
+Tipo Comunicação Topologia      Tecnologia  Nº Nós  Tempo Médio (s)  Tempo Mediano (s)  Desvio Padrão (s)  Tempo Mínimo (s)  Tempo Máximo (s)  Total Comunicações
+           bcast   fattree gigabitethernet      64         0.001902           0.000219       6.564350e-03          0.000219          0.061173                6300
+         all2all     torus gigabitethernet      32         0.000482           0.000410       2.304503e-04          0.000123          0.000815               99200
+       bcastflex   estrela gigabitethernet      32         0.011221           0.001247       2.699268e-02          0.001195          0.129754                3100
+         all2all   estrela      infiniband      16         0.000021           0.000021       7.767142e-07          0.000019          0.000045               24000
+           bcast   estrela gigabitethernet      16         0.017694           0.001247       3.302850e-02          0.001195          0.127222                1500
+          gather dragonfly      infiniband      16         0.000830           0.000834       3.956991e-04          0.000008          0.001562                1500
+          gather   fattree      infiniband      16         0.000986           0.000988       4.972664e-04          0.000015          0.001901                1500
+        pingpong   estrela gigabitethernet      16         0.001196           0.001196       4.465887e-07          0.001195          0.001196                3000
+         all2all dragonfly      infiniband      32         0.000061           0.000073       2.758887e-05          0.000008          0.000095               99200
+         all2all   fattree gigabitethernet      64         0.001490           0.001820       4.464795e-04          0.000349          0.001893              403200
+         all2all dragonfly gigabitethernet      32         0.012057           0.013790       4.849954e-03          0.000620          0.018199               99200
+    pingpongflex   fattree      infiniband      16         0.000014           0.000016       3.151855e-06          0.000007          0.000016                3000
+           bcast     torus gigabitethernet      64         0.001301           0.000122       3.363291e-03          0.000121          0.022460                6300
+          gather dragonfly gigabitethernet      32         0.050928           0.050701       2.909842e-02          0.000295          0.101096                3100
+          reduce dragonfly      infiniband      16         0.000950           0.000956       4.021655e-04          0.000008          0.001711                1500
+       bcastflex     torus gigabitethernet      64         0.001298           0.000122       3.355065e-03          0.000121          0.022386                6300
+       bcastflex dragonfly      infiniband      64         0.000070           0.000008       1.993886e-04          0.000007          0.001572                6300
+    pingpongflex     torus gigabitethernet      32         0.000276           0.000316       1.014531e-04          0.000121          0.000512                6200
+         all2all     torus      infiniband      32         0.000006           0.000006       2.290902e-06          0.000002          0.000028               99200
+        pingpong   fattree gigabitethernet      32         0.000496           0.000609       1.289432e-04          0.000219          0.000610                6200
+       bcastflex   fattree      infiniband      32         0.000123           0.000008       3.355682e-04          0.000007          0.002349                3100
+         scatter     torus      infiniband      16         0.000216           0.000176       1.615861e-04          0.000002          0.000773                1500
+         all2all     torus      infiniband      64         0.000008           0.000007       2.907653e-06          0.000002          0.000031              403200
+    pingpongflex   estrela      infiniband      16         0.000018           0.000018       5.535525e-07          0.000017          0.000034                3000
+          reduce   estrela gigabitethernet      16         0.078454           0.078384       4.485828e-02          0.001365          0.155387                1500
+         scatter   fattree gigabitethernet      64         0.028546           0.025945       1.867383e-02          0.000220          0.069904                6300
+    pingpongflex     torus      infiniband      32         0.000005           0.000006       2.039774e-06          0.000002          0.000010                6200
+         scatter     torus      infiniband      64         0.000330           0.000285       2.452765e-04          0.000002          0.001200                6300
+         all2all     torus gigabitethernet      64         0.000911           0.001075       4.354065e-04          0.000123          0.001457              403200
+       bcastflex   fattree gigabitethernet      64         0.001942           0.000219       6.732198e-03          0.000219          0.061455                6300
+          gather   estrela gigabitethernet      64         0.140455           0.140441       8.023963e-02          0.002755          0.278126                6300
+          reduce   fattree      infiniband      16         0.000943           0.000946       4.990037e-04          0.000015          0.001846                1500
+           bcast dragonfly gigabitethernet      64         0.002129           0.000246       6.116062e-03          0.000220          0.045117                6300
+          gather dragonfly gigabitethernet      16         0.030245           0.030165       1.730331e-02          0.000297          0.060013                1500
+          gather     torus gigabitethernet      64         0.047588           0.047540       2.740368e-02          0.000122          0.094994                6300
+           bcast   estrela      infiniband      32         0.000166           0.000018       3.975164e-04          0.000017          0.001906                3100
+          reduce     torus      infiniband      64         0.000730           0.000730       3.443862e-04          0.000004          0.001342                6300
+          reduce   fattree gigabitethernet      64         0.088231           0.087857       5.059253e-02          0.000333          0.175380                6300
+         scatter   fattree      infiniband      32         0.000958           0.000868       6.273562e-04          0.000008          0.002358                3100
+        pingpong   fattree gigabitethernet      64         0.000492           0.000609       1.325074e-04          0.000219          0.000610               12600
+          gather dragonfly      infiniband      64         0.001346           0.001346       7.217917e-04          0.000012          0.002614                6300
+         all2all   fattree      infiniband      16         0.000015           0.000017       3.761992e-06          0.000007          0.000056               24000
+          gather dragonfly      infiniband      32         0.001336           0.001337       6.962971e-04          0.000012          0.002554                3100
+           bcast     torus gigabitethernet      16         0.003154           0.000293       4.377547e-03          0.000121          0.022371                1500
+          gather     torus gigabitethernet      32         0.028394           0.028373       1.617321e-02          0.000226          0.056398                3100
+        pingpong dragonfly gigabitethernet      32         0.000416           0.000416       1.187983e-04          0.000220          0.000611                6200
+          gather   fattree      infiniband      64         0.001557           0.001559       7.921739e-04          0.000014          0.002944                6300
+    pingpongflex   fattree      infiniband      32         0.000019           0.000023       5.180949e-06          0.000007          0.000035                6200
+          reduce     torus gigabitethernet      32         0.028103           0.028099       1.617438e-02          0.000137          0.056063                3100
+        pingpong dragonfly gigabitethernet      16         0.000312           0.000318       5.592841e-05          0.000220          0.000416                3000
+          reduce   estrela gigabitethernet      64         0.140418           0.140406       8.023965e-02          0.002714          0.278096                6300
+          reduce     torus gigabitethernet      16         0.020797           0.020796       1.196654e-02          0.000123          0.041453                1500
+          gather   fattree gigabitethernet      64         0.088199           0.087748       5.059159e-02          0.000220          0.175296                6300
+          reduce dragonfly gigabitethernet      32         0.050718           0.050562       2.909780e-02          0.000298          0.100829                3100
+        pingpong   fattree gigabitethernet      16         0.000375           0.000414       7.802352e-05          0.000219          0.000415                3000
+       bcastflex     torus      infiniband      32         0.000041           0.000002       7.259278e-05          0.000002          0.000401                3100
+           bcast   estrela      infiniband      16         0.000255           0.000018       4.753022e-04          0.000017          0.001804                1500
+           bcast   estrela gigabitethernet      64         0.007323           0.001247       2.194360e-02          0.001195          0.132343                6300
+       bcastflex   estrela      infiniband      64         0.000103           0.000018       3.062876e-04          0.000017          0.001857                6300
+           bcast dragonfly      infiniband      64         0.000073           0.000008       2.010425e-04          0.000007          0.001576                6300
+    pingpongflex   estrela gigabitethernet      16         0.001196           0.001196       4.460833e-07          0.001195          0.001196                3000
+       bcastflex     torus gigabitethernet      32         0.002126           0.000127       4.032234e-03          0.000121          0.022373                3100
+        pingpong     torus gigabitethernet      64         0.000322           0.000317       1.145045e-04          0.000121          0.000610               12600
+    pingpongflex   estrela      infiniband      32         0.000018           0.000018       4.662018e-07          0.000017          0.000018                6200
+         all2all     torus      infiniband      16         0.000005           0.000004       2.061832e-06          0.000002          0.000034               24000
+       bcastflex   fattree gigabitethernet      16         0.004732           0.000244       9.451589e-03          0.000219          0.043509                1500
+         scatter dragonfly gigabitethernet      64         0.082232           0.081507       4.753083e-02          0.000272          0.175125                6300
+           bcast dragonfly      infiniband      16         0.000159           0.000008       2.753226e-04          0.000007          0.001231                1500
+         scatter dragonfly      infiniband      32         0.000841           0.000760       5.544362e-04          0.000008          0.002397                3100
+          gather dragonfly gigabitethernet      64         0.091908           0.091445       5.269268e-02          0.000304          0.182585                6300
+         scatter   fattree      infiniband      64         0.000966           0.000878       6.357495e-04          0.000008          0.002478                6300
+       bcastflex   estrela gigabitethernet      16         0.017887           0.001247       3.340618e-02          0.001195          0.127231                1500
+           bcast   fattree      infiniband      64         0.000072           0.000008       2.498473e-04          0.000007          0.002373                6300
+          gather   fattree gigabitethernet      16         0.034744           0.034555       1.969323e-02          0.000308          0.068656                1500
+         scatter dragonfly      infiniband      64         0.000945           0.000880       6.111923e-04          0.000008          0.002542                6300
+          reduce   fattree      infiniband      64         0.001505           0.001507       7.907744e-04          0.000008          0.002890                6300
+          reduce dragonfly      infiniband      64         0.001555           0.001558       7.275085e-04          0.000011          0.002889                6300
+           bcast dragonfly      infiniband      32         0.000109           0.000008       2.521306e-04          0.000007          0.001578                3100
+    pingpongflex   estrela gigabitethernet      64         0.001196           0.001196       4.466119e-07          0.001195          0.001196               12600
+          reduce dragonfly gigabitethernet      64         0.091900           0.091446       5.269312e-02          0.000246          0.182644                6300
+         all2all dragonfly      infiniband      64         0.000192           0.000240       1.118055e-04          0.000008          0.000320              403200
+         scatter   estrela gigabitethernet      32         0.099081           0.099081       5.664624e-02          0.001962          0.196203                3100
+    pingpongflex     torus      infiniband      64         0.000006           0.000006       2.490187e-06          0.000002          0.000105               12600
+       bcastflex   fattree      infiniband      64         0.000072           0.000008       2.490660e-04          0.000007          0.002354                6300
+       bcastflex dragonfly gigabitethernet      64         0.002093           0.000246       6.029642e-03          0.000220          0.044785                6300
+         all2all dragonfly      infiniband      16         0.000019           0.000020       6.263559e-06          0.000008          0.000035               24000
+    pingpongflex dragonfly gigabitethernet      16         0.000312           0.000318       5.593864e-05          0.000220          0.000416                3000
+       bcastflex dragonfly gigabitethernet      16         0.004682           0.000247       8.349646e-03          0.000220          0.035789                1500
+         scatter   estrela      infiniband      16         0.000935           0.000941       5.296292e-04          0.000020          0.001839                1500
+         all2all     torus gigabitethernet      16         0.000289           0.000295       1.195562e-04          0.000123          0.000490               24000
+         all2all   estrela gigabitethernet      32         0.002754           0.002754       4.879680e-07          0.002744          0.002772               99200
+          reduce     torus      infiniband      32         0.000568           0.000567       2.881401e-04          0.000004          0.001090                3100
+       bcastflex   fattree gigabitethernet      32         0.003274           0.000220       8.850233e-03          0.000219          0.061068                3100
+          gather   estrela gigabitethernet      32         0.099096           0.099024       5.664892e-02          0.001800          0.196254                3100
+        pingpong     torus      infiniband      16         0.000004           0.000004       1.789288e-06          0.000002          0.000025                3000
+       bcastflex   estrela      infiniband      32         0.000163           0.000018       3.876267e-04          0.000017          0.001808                3100
+        pingpong   estrela gigabitethernet      32         0.001196           0.001196       4.459795e-07          0.001195          0.001196                6200
+          reduce   fattree      infiniband      32         0.001336           0.001339       7.337547e-04          0.000009          0.002615                3100
+          reduce   fattree gigabitethernet      16         0.034387           0.034273       1.969347e-02          0.000271          0.068276                1500
+         scatter     torus gigabitethernet      16         0.013724           0.011442       9.913564e-03          0.000122          0.044257                1500
+           bcast     torus      infiniband      32         0.000051           0.000004       8.397944e-05          0.000002          0.000404                3100
+           bcast dragonfly gigabitethernet      16         0.004672           0.000246       8.325697e-03          0.000220          0.035763                1500
+        pingpong dragonfly      infiniband      16         0.000012           0.000012       2.266642e-06          0.000007          0.000016                3000
+         all2all   estrela gigabitethernet      64         0.006892           0.006892       9.457747e-07          0.006839          0.006914              403200
+          gather   estrela      infiniband      32         0.001360           0.001358       6.259557e-04          0.000118          0.002486                3100
+    pingpongflex     torus gigabitethernet      64         0.000322           0.000317       1.145082e-04          0.000121          0.000610               12600
+    pingpongflex   estrela      infiniband      64         0.000018           0.000018       8.404823e-07          0.000017          0.000092               12600
+           bcast     torus      infiniband      64         0.000024           0.000002       6.042604e-05          0.000002          0.000402                6300
+        pingpong   estrela      infiniband      16         0.000018           0.000018       7.957506e-07          0.000017          0.000053                3000
+          reduce dragonfly      infiniband      32         0.001295           0.001293       6.941225e-04          0.000007          0.002543                3100
+    pingpongflex     torus gigabitethernet      16         0.000232           0.000219       8.625153e-05          0.000121          0.000415                3000
+        pingpong     torus gigabitethernet      32         0.000276           0.000316       1.014532e-04          0.000121          0.000512                6200
+          gather     torus gigabitethernet      16         0.020806           0.020830       1.197497e-02          0.000124          0.041503                1500
+    pingpongflex   fattree gigabitethernet      64         0.000492           0.000609       1.324966e-04          0.000219          0.000610               12600
+          gather   estrela      infiniband      64         0.001446           0.001443       7.428550e-04          0.000017          0.002801                6300
+          gather     torus      infiniband      32         0.000681           0.000683       2.922161e-04          0.000002          0.001211                3100
+         all2all   estrela      infiniband      32         0.000033           0.000033       9.468783e-07          0.000019          0.000058               99200
+          gather     torus      infiniband      16         0.000536           0.000537       2.353901e-04          0.000002          0.000970                1500
+        pingpong   fattree      infiniband      32         0.000019           0.000023       5.176915e-06          0.000007          0.000025                6200
+          reduce   estrela      infiniband      16         0.001152           0.001152       5.670776e-04          0.000018          0.002155                1500
+          gather     torus      infiniband      64         0.000830           0.000831       3.503742e-04          0.000004          0.001507                6300
+        pingpong dragonfly gigabitethernet      64         0.000434           0.000416       1.202013e-04          0.000220          0.000611               12600
+          reduce   fattree gigabitethernet      32         0.054045           0.053793       3.093200e-02          0.000290          0.107302                3100
+    pingpongflex   estrela gigabitethernet      32         0.001196           0.001196       8.213839e-07          0.001195          0.001250                6200
+        pingpong     torus      infiniband      32         0.000005           0.000006       2.039297e-06          0.000002          0.000010                6200
+         scatter   fattree gigabitethernet      16         0.032536           0.029964       2.048732e-02          0.000268          0.071020                1500
+          gather   fattree      infiniband      32         0.001409           0.001407       7.333501e-04          0.000024          0.002700                3100
+        pingpong     torus      infiniband      64         0.000006           0.000006       2.301785e-06          0.000002          0.000012               12600
+         scatter   estrela gigabitethernet      16         0.078435           0.078434       4.485013e-02          0.001553          0.155322                1500
+       bcastflex     torus      infiniband      16         0.000067           0.000029       8.046195e-05          0.000002          0.000404                1500
+         scatter   estrela      infiniband      64         0.001284           0.001286       7.358427e-04          0.000026          0.002547                6300
+           bcast   fattree      infiniband      32         0.000123           0.000008       3.352389e-04          0.000007          0.002346                3100
+           bcast   fattree      infiniband      16         0.000185           0.000008       3.545824e-04          0.000007          0.001666                1500
+    pingpongflex   fattree gigabitethernet      32         0.000496           0.000609       1.289429e-04          0.000219          0.000610                6200
+         scatter   estrela gigabitethernet      64         0.140356           0.140354       8.023670e-02          0.002779          0.277937                6300
+         scatter   fattree      infiniband      16         0.000765           0.000695       4.871529e-04          0.000008          0.001699                1500
+          gather   fattree gigabitethernet      32         0.053909           0.053706       3.092909e-02          0.000236          0.107167                3100
+       bcastflex   estrela      infiniband      16         0.000255           0.000019       4.729020e-04          0.000017          0.001789                1500
+         scatter dragonfly gigabitethernet      16         0.024675           0.023984       1.474594e-02          0.000272          0.057918                1500
+        pingpong     torus gigabitethernet      16         0.000232           0.000219       8.625872e-05          0.000121          0.000415                3000
+       bcastflex     torus gigabitethernet      16         0.003154           0.000292       4.377466e-03          0.000121          0.022373                1500
+        pingpong   estrela      infiniband      32         0.000018           0.000018       4.661392e-07          0.000017          0.000018                6200
+    pingpongflex   fattree gigabitethernet      16         0.000375           0.000414       7.802172e-05          0.000219          0.000415                3000
+        pingpong   estrela      infiniband      64         0.000018           0.000018       1.095871e-06          0.000017          0.000129               12600
+         scatter dragonfly gigabitethernet      32         0.041786           0.041099       2.475305e-02          0.000272          0.096250                3100
+          reduce   estrela      infiniband      64         0.001383           0.001386       7.407455e-04          0.000017          0.002670                6300
+        pingpong   fattree      infiniband      64         0.000019           0.000023       5.320669e-06          0.000007          0.000024               12600
+         scatter     torus gigabitethernet      64         0.030147           0.025199       2.236505e-02          0.000122          0.092480                6300
+          reduce   estrela gigabitethernet      32         0.099089           0.099048       5.664779e-02          0.001855          0.196243                3100
+        pingpong   fattree      infiniband      16         0.000014           0.000016       3.149738e-06          0.000007          0.000016                3000
+           bcast   estrela gigabitethernet      32         0.011317           0.001247       2.723314e-02          0.001195          0.129781                3100
+       bcastflex dragonfly gigabitethernet      32         0.003174           0.000246       7.544885e-03          0.000220          0.044523                3100
+          gather   estrela gigabitethernet      16         0.078491           0.078491       4.485210e-02          0.001583          0.155400                1500
+          reduce     torus gigabitethernet      64         0.047632           0.047606       2.740423e-02          0.000169          0.095037                6300
+          gather   estrela      infiniband      16         0.001176           0.001178       5.688306e-04          0.000017          0.002186                1500
+        pingpong dragonfly      infiniband      64         0.000016           0.000016       4.827230e-06          0.000007          0.000024               12600
+           bcast   fattree gigabitethernet      16         0.004671           0.000244       9.462966e-03          0.000219          0.044238                1500
+         all2all   fattree      infiniband      64         0.000022           0.000027       6.491539e-06          0.000008          0.000049              403200
+    pingpongflex dragonfly gigabitethernet      64         0.000434           0.000416       1.202013e-04          0.000220          0.000611               12600
+        pingpong   estrela gigabitethernet      64         0.001196           0.001196       4.482263e-07          0.001195          0.001200               12600
+           bcast   estrela      infiniband      64         0.000104           0.000018       3.055665e-04          0.000017          0.001818                6300
+           bcast   fattree gigabitethernet      32         0.003275           0.000220       8.851482e-03          0.000219          0.061080                3100
+         scatter     torus      infiniband      32         0.000233           0.000184       1.834103e-04          0.000002          0.000951                3100
+         all2all dragonfly gigabitethernet      64         0.038462           0.049212       2.200573e-02          0.000610          0.065479              403200
+         all2all   estrela      infiniband      64         0.000082           0.000082       1.212114e-06          0.000018          0.000107              403200
+       bcastflex   fattree      infiniband      16         0.000166           0.000008       3.369474e-04          0.000007          0.001581                1500
+         all2all   fattree gigabitethernet      32         0.000905           0.001105       2.535229e-04          0.000257          0.001131               99200
+          reduce dragonfly gigabitethernet      16         0.030163           0.030071       1.729697e-02          0.000220          0.059940                1500
+       bcastflex     torus      infiniband      64         0.000024           0.000002       6.008642e-05          0.000002          0.000402                6300
+          reduce     torus      infiniband      16         0.000565           0.000567       2.398043e-04          0.000002          0.001004                1500
+         all2all   estrela gigabitethernet      16         0.001937           0.001936       8.108983e-07          0.001926          0.001960               24000
+         all2all dragonfly gigabitethernet      16         0.002991           0.003160       9.150822e-04          0.000806          0.004004               24000
+          reduce   estrela      infiniband      32         0.001384           0.001382       6.280149e-04          0.000080          0.002520                3100
+         scatter   estrela      infiniband      32         0.001081           0.001082       6.199924e-04          0.000021          0.002145                3100
+    pingpongflex   fattree      infiniband      64         0.000019           0.000023       5.321823e-06          0.000007          0.000038               12600
+           bcast dragonfly gigabitethernet      32         0.003029           0.000246       7.178881e-03          0.000220          0.043922                3100
+           bcast     torus      infiniband      16         0.000077           0.000055       8.381183e-05          0.000002          0.000440                1500
+         all2all   fattree gigabitethernet      16         0.000612           0.000696       1.700158e-04          0.000254          0.000715               24000
+         scatter   fattree gigabitethernet      32         0.026221           0.024005       1.695475e-02          0.000219          0.063851                3100
+    pingpongflex dragonfly      infiniband      64         0.000016           0.000016       4.913776e-06          0.000007          0.000119               12600
+    pingpongflex dragonfly      infiniband      32         0.000016           0.000016       4.769261e-06          0.000007          0.000024                6200
+         scatter     torus gigabitethernet      32         0.018940           0.016184       1.368421e-02          0.000122          0.057900                3100
+       bcastflex dragonfly      infiniband      16         0.000155           0.000008       2.705810e-04          0.000007          0.001187                1500
+    pingpongflex     torus      infiniband      16         0.000004           0.000004       1.736940e-06          0.000002          0.000009                3000
+         scatter dragonfly      infiniband      16         0.000637           0.000601       3.990443e-04          0.000008          0.001589                1500
+       bcastflex   estrela gigabitethernet      64         0.007276           0.001247       2.177610e-02          0.001195          0.132335                6300
+           bcast     torus gigabitethernet      32         0.002126           0.000124       4.032445e-03          0.000121          0.022372                3100
+        pingpong dragonfly      infiniband      32         0.000016           0.000016       4.771080e-06          0.000007          0.000024                6200
+       bcastflex dragonfly      infiniband      32         0.000111           0.000008       2.578808e-04          0.000007          0.001598                3100
+    pingpongflex dragonfly gigabitethernet      32         0.000416           0.000416       1.187951e-04          0.000220          0.000611                6200
+    pingpongflex dragonfly      infiniband      16         0.000012           0.000012       3.081278e-06          0.000007          0.000111                3000
+         all2all   fattree      infiniband      32         0.000021           0.000025       5.812269e-06          0.000007          0.000045               99200
+
+================================================================================
+2. ANÁLISE DE ESCALABILIDADE
+================================================================================
+
+Tipo Comunicação Topologia      Tecnologia  De Nós  Para Nós  Tempo Médio Inicial (s)  Tempo Médio Final (s)  Variação (%)  Variação Absoluta (s)
+           bcast   fattree gigabitethernet      16        32                 0.004671               0.003275    -29.887360          -1.395966e-03
+           bcast   fattree gigabitethernet      32        64                 0.003275               0.001902    -41.916192          -1.372668e-03
+         all2all     torus gigabitethernet      16        32                 0.000289               0.000482     66.913140           1.931959e-04
+         all2all     torus gigabitethernet      32        64                 0.000482               0.000911     88.980932           4.288190e-04
+       bcastflex   estrela gigabitethernet      16        32                 0.017887               0.011221    -37.263104          -6.665091e-03
+       bcastflex   estrela gigabitethernet      32        64                 0.011221               0.007276    -35.159494          -3.945415e-03
+         all2all   estrela      infiniband      16        32                 0.000021               0.000033     55.818578           1.193987e-05
+         all2all   estrela      infiniband      32        64                 0.000033               0.000082    145.076334           4.835448e-05
+           bcast   estrela gigabitethernet      16        32                 0.017694               0.011317    -36.038125          -6.376454e-03
+           bcast   estrela gigabitethernet      32        64                 0.011317               0.007323    -35.290952          -3.993940e-03
+          gather dragonfly      infiniband      16        32                 0.000830               0.001336     60.967112           5.061567e-04
+          gather dragonfly      infiniband      32        64                 0.001336               0.001346      0.731347           9.773502e-06
+          gather   fattree      infiniband      16        32                 0.000986               0.001409     42.902123           4.229860e-04
+          gather   fattree      infiniband      32        64                 0.001409               0.001557     10.494845           1.478638e-04
+        pingpong   estrela gigabitethernet      16        32                 0.001196               0.001196      0.000094           1.129032e-09
+        pingpong   estrela gigabitethernet      32        64                 0.001196               0.001196     -0.000081          -9.703021e-10
+         all2all dragonfly      infiniband      16        32                 0.000019               0.000061    214.016026           4.161666e-05
+         all2all dragonfly      infiniband      32        64                 0.000061               0.000192    214.098707           1.307335e-04
+         all2all   fattree gigabitethernet      16        32                 0.000612               0.000905     47.942155           2.932412e-04
+         all2all   fattree gigabitethernet      32        64                 0.000905               0.001490     64.680415           5.852915e-04
+         all2all dragonfly gigabitethernet      16        32                 0.002991               0.012057    303.130558           9.065842e-03
+         all2all dragonfly gigabitethernet      32        64                 0.012057               0.038462    219.008942           2.640499e-02
+    pingpongflex   fattree      infiniband      16        32                 0.000014               0.000019     34.144916           4.836172e-06
+    pingpongflex   fattree      infiniband      32        64                 0.000019               0.000019     -0.935249          -1.776959e-07
+           bcast     torus gigabitethernet      16        32                 0.003154               0.002126    -32.589797          -1.027988e-03
+           bcast     torus gigabitethernet      32        64                 0.002126               0.001301    -38.793127          -8.248727e-04
+          gather dragonfly gigabitethernet      16        32                 0.030245               0.050928     68.386549           2.068326e-02
+          gather dragonfly gigabitethernet      32        64                 0.050928               0.091908     80.466384           4.097983e-02
+          reduce dragonfly      infiniband      16        32                 0.000950               0.001295     36.246265           3.443900e-04
+          reduce dragonfly      infiniband      32        64                 0.001295               0.001555     20.096757           2.601584e-04
+       bcastflex     torus gigabitethernet      16        32                 0.003154               0.002126    -32.584902          -1.027650e-03
+       bcastflex     torus gigabitethernet      32        64                 0.002126               0.001298    -38.971225          -8.285716e-04
+       bcastflex dragonfly      infiniband      16        32                 0.000155               0.000111    -28.501297          -4.417929e-05
+       bcastflex dragonfly      infiniband      32        64                 0.000111               0.000070    -36.721599          -4.069807e-05
+    pingpongflex     torus gigabitethernet      16        32                 0.000232               0.000276     18.768915           4.361283e-05
+    pingpongflex     torus gigabitethernet      32        64                 0.000276               0.000322     16.500092           4.553698e-05
+         all2all     torus      infiniband      16        32                 0.000005               0.000006     17.934394           8.986028e-07
+         all2all     torus      infiniband      32        64                 0.000006               0.000008     27.689856           1.636222e-06
+        pingpong   fattree gigabitethernet      16        32                 0.000375               0.000496     32.178292           1.207918e-04
+        pingpong   fattree gigabitethernet      32        64                 0.000496               0.000492     -0.885440          -4.393331e-06
+       bcastflex   fattree      infiniband      16        32                 0.000166               0.000123    -25.893357          -4.301974e-05
+       bcastflex   fattree      infiniband      32        64                 0.000123               0.000072    -41.927125          -5.162162e-05
+         scatter     torus      infiniband      16        32                 0.000216               0.000233      7.636317           1.652942e-05
+         scatter     torus      infiniband      32        64                 0.000233               0.000330     41.522935           9.674322e-05
+    pingpongflex   estrela      infiniband      16        32                 0.000018               0.000018     -0.025597          -4.526882e-09
+    pingpongflex   estrela      infiniband      32        64                 0.000018               0.000018      0.046162           8.161802e-09
+          reduce   estrela gigabitethernet      16        32                 0.078454               0.099089     26.301419           2.063462e-02
+          reduce   estrela gigabitethernet      32        64                 0.099089               0.140418     41.709413           4.132944e-02
+         scatter   fattree gigabitethernet      16        32                 0.032536               0.026221    -19.409176          -6.315049e-03
+         scatter   fattree gigabitethernet      32        64                 0.026221               0.028546      8.867341           2.325137e-03
+    pingpongflex     torus      infiniband      16        32                 0.000004               0.000005     20.378298           8.726667e-07
+    pingpongflex     torus      infiniband      32        64                 0.000005               0.000006     17.880621           9.217460e-07
+       bcastflex   fattree gigabitethernet      16        32                 0.004732               0.003274    -30.805453          -1.457752e-03
+       bcastflex   fattree gigabitethernet      32        64                 0.003274               0.001942    -40.695146          -1.332510e-03
+          gather   estrela gigabitethernet      16        32                 0.078491               0.099096     26.250893           2.060470e-02
+          gather   estrela gigabitethernet      32        64                 0.099096               0.140455     41.735947           4.135871e-02
+          reduce   fattree      infiniband      16        32                 0.000943               0.001336     41.709535           3.933671e-04
+          reduce   fattree      infiniband      32        64                 0.001336               0.001505     12.587924           1.682348e-04
+           bcast dragonfly gigabitethernet      16        32                 0.004672               0.003029    -35.160242          -1.642659e-03
+           bcast dragonfly gigabitethernet      32        64                 0.003029               0.002129    -29.732862          -9.006866e-04
+          gather     torus gigabitethernet      16        32                 0.020806               0.028394     36.468942           7.587882e-03
+          gather     torus gigabitethernet      32        64                 0.028394               0.047588     67.596994           1.919370e-02
+           bcast   estrela      infiniband      16        32                 0.000255               0.000166    -34.711736          -8.839320e-05
+           bcast   estrela      infiniband      32        64                 0.000166               0.000104    -37.499285          -6.234486e-05
+          reduce     torus      infiniband      16        32                 0.000565               0.000568      0.493529           2.788989e-06
+          reduce     torus      infiniband      32        64                 0.000568               0.000730     28.484626           1.617643e-04
+          reduce   fattree gigabitethernet      16        32                 0.034387               0.054045     57.169526           1.965874e-02
+          reduce   fattree gigabitethernet      32        64                 0.054045               0.088231     63.253890           3.418586e-02
+         scatter   fattree      infiniband      16        32                 0.000765               0.000958     25.259291           1.931992e-04
+         scatter   fattree      infiniband      32        64                 0.000958               0.000966      0.866674           8.303282e-06
+         all2all   fattree      infiniband      16        32                 0.000015               0.000021     34.433388           5.304650e-06
+         all2all   fattree      infiniband      32        64                 0.000021               0.000022      7.447937           1.542482e-06
+        pingpong dragonfly gigabitethernet      16        32                 0.000312               0.000416     33.382372           1.040157e-04
+        pingpong dragonfly gigabitethernet      32        64                 0.000416               0.000434      4.469378           1.857493e-05
+          reduce     torus gigabitethernet      16        32                 0.020797               0.028103     35.130379           7.306145e-03
+          reduce     torus gigabitethernet      32        64                 0.028103               0.047632     69.489330           1.952885e-02
+          gather   fattree gigabitethernet      16        32                 0.034744               0.053909     55.159559           1.916483e-02
+          gather   fattree gigabitethernet      32        64                 0.053909               0.088199     63.607022           3.429003e-02
+          reduce dragonfly gigabitethernet      16        32                 0.030163               0.050718     68.146987           2.055497e-02
+          reduce dragonfly gigabitethernet      32        64                 0.050718               0.091900     81.200113           4.118281e-02
+       bcastflex     torus      infiniband      16        32                 0.000067               0.000041    -38.661072          -2.608591e-05
+       bcastflex     torus      infiniband      32        64                 0.000041               0.000024    -42.431321          -1.756123e-05
+       bcastflex   estrela      infiniband      16        32                 0.000255               0.000163    -36.086418          -9.194699e-05
+       bcastflex   estrela      infiniband      32        64                 0.000163               0.000103    -36.518630          -5.947047e-05
+           bcast dragonfly      infiniband      16        32                 0.000159               0.000109    -31.563663          -5.016708e-05
+           bcast dragonfly      infiniband      32        64                 0.000109               0.000073    -32.490227          -3.534035e-05
+    pingpongflex   estrela gigabitethernet      16        32                 0.001196               0.001196      0.000618           7.387097e-09
+    pingpongflex   estrela gigabitethernet      32        64                 0.001196               0.001196     -0.000715          -8.545827e-09
+        pingpong     torus gigabitethernet      16        32                 0.000232               0.000276     18.771774           4.361834e-05
+        pingpong     torus gigabitethernet      32        64                 0.000276               0.000322     16.500239           4.553731e-05
+         scatter dragonfly gigabitethernet      16        32                 0.024675               0.041786     69.346184           1.711125e-02
+         scatter dragonfly gigabitethernet      32        64                 0.041786               0.082232     96.790633           4.044528e-02
+         scatter dragonfly      infiniband      16        32                 0.000637               0.000841     31.980649           2.038583e-04
+         scatter dragonfly      infiniband      32        64                 0.000841               0.000945     12.379031           1.041449e-04
+           bcast   fattree      infiniband      16        32                 0.000185               0.000123    -33.598949          -6.204673e-05
+           bcast   fattree      infiniband      32        64                 0.000123               0.000072    -41.434389          -5.080765e-05
+         scatter   estrela gigabitethernet      16        32                 0.078435               0.099081     26.322022           2.064572e-02
+         scatter   estrela gigabitethernet      32        64                 0.099081               0.140356     41.657524           4.127465e-02
+       bcastflex dragonfly gigabitethernet      16        32                 0.004682               0.003174    -32.210713          -1.508124e-03
+       bcastflex dragonfly gigabitethernet      32        64                 0.003174               0.002093    -34.044561          -1.080552e-03
+    pingpongflex dragonfly gigabitethernet      16        32                 0.000312               0.000416     33.383370           1.040185e-04
+    pingpongflex dragonfly gigabitethernet      32        64                 0.000416               0.000434      4.468932           1.857316e-05
+         scatter   estrela      infiniband      16        32                 0.000935               0.001081     15.703659           1.467739e-04
+         scatter   estrela      infiniband      32        64                 0.001081               0.001284     18.721468           2.024581e-04
+         all2all   estrela gigabitethernet      16        32                 0.001937               0.002754     42.214217           8.174833e-04
+         all2all   estrela gigabitethernet      32        64                 0.002754               0.006892    150.255503           4.138029e-03
+        pingpong     torus      infiniband      16        32                 0.000004               0.000005     20.067928           8.615161e-07
+        pingpong     torus      infiniband      32        64                 0.000005               0.000006     17.682285           9.114363e-07
+         scatter     torus gigabitethernet      16        32                 0.013724               0.018940     38.000487           5.215326e-03
+         scatter     torus gigabitethernet      32        64                 0.018940               0.030147     59.172107           1.120701e-02
+           bcast     torus      infiniband      16        32                 0.000077               0.000051    -33.558048          -2.586252e-05
+           bcast     torus      infiniband      32        64                 0.000051               0.000024    -52.298946          -2.677993e-05
+        pingpong dragonfly      infiniband      16        32                 0.000012               0.000016     35.973514           4.161656e-06
+        pingpong dragonfly      infiniband      32        64                 0.000016               0.000016      4.730998           7.442012e-07
+          gather   estrela      infiniband      16        32                 0.001176               0.001360     15.673140           1.842608e-04
+          gather   estrela      infiniband      32        64                 0.001360               0.001446      6.301961           8.570083e-05
+        pingpong   estrela      infiniband      16        32                 0.000018               0.000018     -0.064240          -1.136559e-08
+        pingpong   estrela      infiniband      32        64                 0.000018               0.000018      0.047045           8.317972e-09
+    pingpongflex   fattree gigabitethernet      16        32                 0.000375               0.000496     32.177482           1.207897e-04
+    pingpongflex   fattree gigabitethernet      32        64                 0.000496               0.000492     -0.884129          -4.386831e-06
+          gather     torus      infiniband      16        32                 0.000536               0.000681     27.186469           1.456104e-04
+          gather     torus      infiniband      32        64                 0.000681               0.000830     21.879844           1.490475e-04
+        pingpong   fattree      infiniband      16        32                 0.000014               0.000019     34.144138           4.835720e-06
+        pingpong   fattree      infiniband      32        64                 0.000019               0.000019     -0.940212          -1.786252e-07
+          reduce   estrela      infiniband      16        32                 0.001152               0.001384     20.165628           2.322992e-04
+          reduce   estrela      infiniband      32        64                 0.001384               0.001383     -0.082246          -1.138495e-06
+    pingpongflex dragonfly      infiniband      16        32                 0.000012               0.000016     35.214938           4.097258e-06
+    pingpongflex dragonfly      infiniband      32        64                 0.000016               0.000016      4.757967           7.485356e-07
+
+================================================================================
+3. COMPARAÇÃO DE TECNOLOGIAS
+================================================================================
+
+Tipo Comunicação Topologia  Nº Nós    Tecnologia 1  Tempo Médio 1 (s)    Tecnologia 2  Tempo Médio 2 (s)     Melhor  Diferença (%)  Diferença Absoluta (s)
+           bcast   fattree      64 gigabitethernet           0.001902      infiniband           0.000072 infiniband      96.224520                0.001830
+         all2all     torus      32 gigabitethernet           0.000482      infiniband           0.000006 infiniband      98.773847                0.000476
+       bcastflex   estrela      32 gigabitethernet           0.011221      infiniband           0.000163 infiniband      98.548768                0.011059
+         all2all   estrela      16      infiniband           0.000021 gigabitethernet           0.001937 infiniband    8953.139244                0.001915
+           bcast   estrela      16 gigabitethernet           0.017694      infiniband           0.000255 infiniband      98.560786                0.017439
+          gather dragonfly      16      infiniband           0.000830 gigabitethernet           0.030245 infiniband    3542.998059                0.029414
+          gather   fattree      16      infiniband           0.000986 gigabitethernet           0.034744 infiniband    3424.009212                0.033758
+        pingpong   estrela      16 gigabitethernet           0.001196      infiniband           0.000018 infiniband      98.520368                0.001178
+         all2all dragonfly      32      infiniband           0.000061 gigabitethernet           0.012057 infiniband   19644.737894                0.011996
+         all2all   fattree      64 gigabitethernet           0.001490      infiniband           0.000022 infiniband      98.506721                0.001468
+    pingpongflex   fattree      16      infiniband           0.000014 gigabitethernet           0.000375 infiniband    2550.342425                0.000361
+           bcast     torus      64 gigabitethernet           0.001301      infiniband           0.000024 infiniband      98.123225                0.001277
+          gather dragonfly      32 gigabitethernet           0.050928      infiniband           0.001336 infiniband      97.375958                0.049592
+          reduce dragonfly      16      infiniband           0.000950 gigabitethernet           0.030163 infiniband    3074.555521                0.029213
+       bcastflex     torus      64 gigabitethernet           0.001298      infiniband           0.000024 infiniband      98.163741                0.001274
+       bcastflex dragonfly      64      infiniband           0.000070 gigabitethernet           0.002093 infiniband    2884.975431                0.002023
+    pingpongflex     torus      32 gigabitethernet           0.000276      infiniband           0.000005 infiniband      98.132112                0.000271
+        pingpong   fattree      32 gigabitethernet           0.000496      infiniband           0.000019 infiniband      96.171030                0.000477
+       bcastflex   fattree      32      infiniband           0.000123 gigabitethernet           0.003274 infiniband    2559.447075                0.003151
+         scatter     torus      16      infiniband           0.000216 gigabitethernet           0.013724 infiniband    6240.428782                0.013508
+         all2all     torus      64      infiniband           0.000008 gigabitethernet           0.000911 infiniband   11970.272904                0.000903
+    pingpongflex   estrela      16      infiniband           0.000018 gigabitethernet           0.001196 infiniband    6661.116556                0.001178
+          reduce   estrela      16 gigabitethernet           0.078454      infiniband           0.001152 infiniband      98.531687                0.077302
+         scatter   fattree      64 gigabitethernet           0.028546      infiniband           0.000966 infiniband      96.614763                0.027580
+         scatter     torus      64      infiniband           0.000330 gigabitethernet           0.030147 infiniband    9042.828080                0.029817
+       bcastflex   fattree      64 gigabitethernet           0.001942      infiniband           0.000072 infiniband      96.317933                0.001870
+          gather   estrela      64 gigabitethernet           0.140455      infiniband           0.001446 infiniband      98.970767                0.139009
+          reduce   fattree      16      infiniband           0.000943 gigabitethernet           0.034387 infiniband    3546.097948                0.033444
+           bcast dragonfly      64 gigabitethernet           0.002129      infiniband           0.000073 infiniband      96.550187                0.002055
+          gather     torus      64 gigabitethernet           0.047588      infiniband           0.000830 infiniband      98.255324                0.046758
+           bcast   estrela      32      infiniband           0.000166 gigabitethernet           0.011317 infiniband    6707.075170                0.011151
+          reduce     torus      64      infiniband           0.000730 gigabitethernet           0.047632 infiniband    6427.960922                0.046903
+          reduce   fattree      64 gigabitethernet           0.088231      infiniband           0.001505 infiniband      98.294583                0.086727
+         scatter   fattree      32      infiniband           0.000958 gigabitethernet           0.026221 infiniband    2636.913417                0.025263
+        pingpong   fattree      64 gigabitethernet           0.000492      infiniband           0.000019 infiniband      96.173146                0.000473
+          gather dragonfly      64      infiniband           0.001346 gigabitethernet           0.091908 infiniband    6727.486623                0.090562
+         all2all   fattree      16      infiniband           0.000015 gigabitethernet           0.000612 infiniband    3870.365642                0.000596
+           bcast     torus      16 gigabitethernet           0.003154      infiniband           0.000077 infiniband      97.556752                0.003077
+          gather     torus      32 gigabitethernet           0.028394      infiniband           0.000681 infiniband      97.600895                0.027713
+        pingpong dragonfly      32 gigabitethernet           0.000416      infiniband           0.000016 infiniband      96.215073                0.000400
+          gather   fattree      64      infiniband           0.001557 gigabitethernet           0.088199 infiniband    5565.481350                0.086642
+    pingpongflex   fattree      32      infiniband           0.000019 gigabitethernet           0.000496 infiniband    2511.471235                0.000477
+          reduce     torus      32 gigabitethernet           0.028103      infiniband           0.000568 infiniband      97.979245                0.027535
+        pingpong dragonfly      16 gigabitethernet           0.000312      infiniband           0.000012 infiniband      96.287199                0.000300
+          reduce   estrela      64 gigabitethernet           0.140418      infiniband           0.001383 infiniband      99.015003                0.139035
+          reduce     torus      16 gigabitethernet           0.020797      infiniband           0.000565 infiniband      97.282757                0.020232
+          reduce dragonfly      32 gigabitethernet           0.050718      infiniband           0.001295 infiniband      97.447577                0.049423
+        pingpong   fattree      16 gigabitethernet           0.000375      infiniband           0.000014 infiniband      96.227142                0.000361
+       bcastflex     torus      32      infiniband           0.000041 gigabitethernet           0.002126 infiniband    5037.095580                0.002085
+           bcast   estrela      64 gigabitethernet           0.007323      infiniband           0.000104 infiniband      98.581075                0.007219
+       bcastflex   estrela      64      infiniband           0.000103 gigabitethernet           0.007276 infiniband    6938.227116                0.007173
+        pingpong     torus      64 gigabitethernet           0.000322      infiniband           0.000006 infiniband      98.113334                0.000315
+    pingpongflex   estrela      32      infiniband           0.000018 gigabitethernet           0.001196 infiniband    6662.889410                0.001178
+         all2all     torus      16      infiniband           0.000005 gigabitethernet           0.000289 infiniband    5662.427236                0.000284
+       bcastflex   fattree      16 gigabitethernet           0.004732      infiniband           0.000166 infiniband      96.489060                0.004566
+         scatter dragonfly      64 gigabitethernet           0.082232      infiniband           0.000945 infiniband      98.850265                0.081286
+           bcast dragonfly      16      infiniband           0.000159 gigabitethernet           0.004672 infiniband    2839.437270                0.004513
+         scatter dragonfly      32      infiniband           0.000841 gigabitethernet           0.041786 infiniband    4866.873502                0.040945
+       bcastflex   estrela      16 gigabitethernet           0.017887      infiniband           0.000255 infiniband      98.575486                0.017632
+          reduce dragonfly      64      infiniband           0.001555 gigabitethernet           0.091900 infiniband    5811.185577                0.090346
+           bcast dragonfly      32      infiniband           0.000109 gigabitethernet           0.003029 infiniband    2684.959104                0.002920
+    pingpongflex   estrela      64 gigabitethernet           0.001196      infiniband           0.000018 infiniband      98.520649                0.001178
+         all2all dragonfly      64      infiniband           0.000192 gigabitethernet           0.038462 infiniband   19953.402920                0.038270
+         scatter   estrela      32 gigabitethernet           0.099081      infiniband           0.001081 infiniband      98.908547                0.097999
+    pingpongflex     torus      64      infiniband           0.000006 gigabitethernet           0.000322 infiniband    5190.942573                0.000315
+         all2all dragonfly      16      infiniband           0.000019 gigabitethernet           0.002991 infiniband   15280.040026                0.002971
+    pingpongflex dragonfly      16 gigabitethernet           0.000312      infiniband           0.000012 infiniband      96.265898                0.000300
+       bcastflex dragonfly      16 gigabitethernet           0.004682      infiniband           0.000155 infiniband      96.689320                0.004527
+         scatter   estrela      16      infiniband           0.000935 gigabitethernet           0.078435 infiniband    8291.948199                0.077501
+         all2all   estrela      32 gigabitethernet           0.002754      infiniband           0.000033 infiniband      98.789745                0.002721
+          gather   estrela      32 gigabitethernet           0.099096      infiniband           0.001360 infiniband      98.627689                0.097736
+        pingpong     torus      16      infiniband           0.000004 gigabitethernet           0.000232 infiniband    5312.563087                0.000228
+        pingpong   estrela      32 gigabitethernet           0.001196      infiniband           0.000018 infiniband      98.521320                0.001178
+          reduce   fattree      32      infiniband           0.001336 gigabitethernet           0.054045 infiniband    3943.873871                0.052709
+           bcast     torus      32      infiniband           0.000051 gigabitethernet           0.002126 infiniband    4052.557375                0.002075
+         all2all   estrela      64 gigabitethernet           0.006892      infiniband           0.000082 infiniband      98.814791                0.006810
+    pingpongflex     torus      16 gigabitethernet           0.000232      infiniband           0.000004 infiniband      98.157085                0.000228
+        pingpong     torus      32 gigabitethernet           0.000276      infiniband           0.000005 infiniband      98.132284                0.000271
+          gather     torus      16 gigabitethernet           0.020806      infiniband           0.000536 infiniband      97.425801                0.020271
+    pingpongflex   fattree      64 gigabitethernet           0.000492      infiniband           0.000019 infiniband      96.172716                0.000473
+        pingpong dragonfly      64 gigabitethernet           0.000434      infiniband           0.000016 infiniband      96.205594                0.000418
+         scatter   fattree      16 gigabitethernet           0.032536      infiniband           0.000765 infiniband      97.649206                0.031772
+          gather   fattree      32      infiniband           0.001409 gigabitethernet           0.053909 infiniband    3726.281262                0.052500
+       bcastflex     torus      16      infiniband           0.000067 gigabitethernet           0.003154 infiniband    4574.085565                0.003086
+         scatter   estrela      64      infiniband           0.001284 gigabitethernet           0.140356 infiniband   10832.139321                0.139072
+           bcast   fattree      32      infiniband           0.000123 gigabitethernet           0.003275 infiniband    2570.640679                0.003152
+           bcast   fattree      16      infiniband           0.000185 gigabitethernet           0.004671 infiniband    2429.263582                0.004486
+         scatter dragonfly      16 gigabitethernet           0.024675      infiniband           0.000637 infiniband      97.416657                0.024038
+        pingpong   estrela      64      infiniband           0.000018 gigabitethernet           0.001196 infiniband    6659.601140                0.001178
+          reduce   estrela      32 gigabitethernet           0.099089      infiniband           0.001384 infiniband      98.603018                0.097705
+       bcastflex dragonfly      32 gigabitethernet           0.003174      infiniband           0.000111 infiniband      96.508160                0.003063
+          gather   estrela      16 gigabitethernet           0.078491      infiniband           0.001176 infiniband      98.502198                0.077316
+    pingpongflex dragonfly      64 gigabitethernet           0.000434      infiniband           0.000016 infiniband      96.204150                0.000418
+         scatter     torus      32      infiniband           0.000233 gigabitethernet           0.018940 infiniband    8029.061655                0.018707
+         all2all   fattree      32 gigabitethernet           0.000905      infiniband           0.000021 infiniband      97.711322                0.000884
+    pingpongflex dragonfly      32      infiniband           0.000016 gigabitethernet           0.000416 infiniband    2541.744925                0.000400
+
+================================================================================
+4. COMPARAÇÃO DE TOPOLOGIAS
+================================================================================
+
+Tipo Comunicação      Tecnologia  Nº Nós Topologia 1  Tempo Médio 1 (s) Topologia 2  Tempo Médio 2 (s)    Melhor  Diferença (%)  Diferença Absoluta (s)
+           bcast gigabitethernet      64     fattree           0.001902       torus           0.001301     torus      31.578341                0.000601
+           bcast gigabitethernet      64     fattree           0.001902   dragonfly           0.002129   fattree      11.905266                0.000226
+           bcast gigabitethernet      64     fattree           0.001902     estrela           0.007323   fattree     285.003352                0.005421
+           bcast gigabitethernet      64       torus           0.001301   dragonfly           0.002129     torus      63.552401                0.000827
+           bcast gigabitethernet      64       torus           0.001301     estrela           0.007323     torus     462.692222                0.006022
+           bcast gigabitethernet      64   dragonfly           0.002129     estrela           0.007323 dragonfly     244.044000                0.005195
+         all2all gigabitethernet      32       torus           0.000482   dragonfly           0.012057     torus    2401.768459                0.011575
+         all2all gigabitethernet      32       torus           0.000482     estrela           0.002754     torus     471.460351                0.002272
+         all2all gigabitethernet      32       torus           0.000482     fattree           0.000905     torus      87.768341                0.000423
+         all2all gigabitethernet      32   dragonfly           0.012057     estrela           0.002754   estrela      77.157744                0.009303
+         all2all gigabitethernet      32   dragonfly           0.012057     fattree           0.000905   fattree      92.494576                0.011152
+         all2all gigabitethernet      32     estrela           0.002754     fattree           0.000905   fattree      67.142368                0.001849
+       bcastflex gigabitethernet      32     estrela           0.011221       torus           0.002126     torus      81.053198                0.009095
+       bcastflex gigabitethernet      32     estrela           0.011221     fattree           0.003274   fattree      70.820500                0.007947
+       bcastflex gigabitethernet      32     estrela           0.011221   dragonfly           0.003174 dragonfly      71.715543                0.008048
+       bcastflex gigabitethernet      32       torus           0.002126     fattree           0.003274     torus      54.007521                0.001148
+       bcastflex gigabitethernet      32       torus           0.002126   dragonfly           0.003174     torus      49.283540                0.001048
+       bcastflex gigabitethernet      32     fattree           0.003274   dragonfly           0.003174 dragonfly       3.067370                0.000100
+         all2all      infiniband      16     estrela           0.000021     fattree           0.000015   fattree      27.979516                0.000006
+         all2all      infiniband      16     estrela           0.000021       torus           0.000005     torus      76.576050                0.000016
+         all2all      infiniband      16     estrela           0.000021   dragonfly           0.000019 dragonfly       9.092432                0.000002
+         all2all      infiniband      16     fattree           0.000015       torus           0.000005     torus      67.475989                0.000010
+         all2all      infiniband      16     fattree           0.000015   dragonfly           0.000019   fattree      26.224600                0.000004
+         all2all      infiniband      16       torus           0.000005   dragonfly           0.000019     torus     288.096664                0.000014
+           bcast gigabitethernet      16     estrela           0.017694       torus           0.003154     torus      82.172540                0.014539
+           bcast gigabitethernet      16     estrela           0.017694   dragonfly           0.004672 dragonfly      73.595463                0.013022
+           bcast gigabitethernet      16     estrela           0.017694     fattree           0.004671   fattree      73.602045                0.013023
+           bcast gigabitethernet      16       torus           0.003154   dragonfly           0.004672     torus      48.111609                0.001518
+           bcast gigabitethernet      16       torus           0.003154     fattree           0.004671     torus      48.074686                0.001516
+           bcast gigabitethernet      16   dragonfly           0.004672     fattree           0.004671   fattree       0.024929                0.000001
+          gather      infiniband      16   dragonfly           0.000830     fattree           0.000986 dragonfly      18.756640                0.000156
+          gather      infiniband      16   dragonfly           0.000830       torus           0.000536     torus      35.486570                0.000295
+          gather      infiniband      16   dragonfly           0.000830     estrela           0.001176 dragonfly      41.607893                0.000345
+          gather      infiniband      16     fattree           0.000986       torus           0.000536     torus      45.675939                0.000450
+          gather      infiniband      16     fattree           0.000986     estrela           0.001176   fattree      19.242085                0.000190
+          gather      infiniband      16       torus           0.000536     estrela           0.001176     torus     119.501418                0.000640
+        pingpong gigabitethernet      16     estrela           0.001196   dragonfly           0.000312 dragonfly      73.941444                0.000884
+        pingpong gigabitethernet      16     estrela           0.001196     fattree           0.000375   fattree      68.606243                0.000820
+        pingpong gigabitethernet      16     estrela           0.001196       torus           0.000232     torus      80.567327                0.000963
+        pingpong gigabitethernet      16   dragonfly           0.000312     fattree           0.000375 dragonfly      20.473894                0.000064
+        pingpong gigabitethernet      16   dragonfly           0.000312       torus           0.000232     torus      25.426898                0.000079
+        pingpong gigabitethernet      16     fattree           0.000375       torus           0.000232     torus      38.100198                0.000143
+         all2all      infiniband      32   dragonfly           0.000061       torus           0.000006     torus      90.322821                0.000055
+         all2all      infiniband      32   dragonfly           0.000061     estrela           0.000033   estrela      45.415745                0.000028
+         all2all      infiniband      32   dragonfly           0.000061     fattree           0.000021   fattree      66.083477                0.000040
+         all2all      infiniband      32       torus           0.000006     estrela           0.000033     torus     464.051329                0.000027
+         all2all      infiniband      32       torus           0.000006     fattree           0.000021     torus     250.479458                0.000015
+         all2all      infiniband      32     estrela           0.000033     fattree           0.000021   fattree      37.863907                0.000013
+         all2all gigabitethernet      64     fattree           0.001490       torus           0.000911     torus      38.884177                0.000579
+         all2all gigabitethernet      64     fattree           0.001490     estrela           0.006892   fattree     362.493271                0.005402
+         all2all gigabitethernet      64     fattree           0.001490   dragonfly           0.038462   fattree    2480.985993                0.036971
+         all2all gigabitethernet      64       torus           0.000911     estrela           0.006892     torus     656.748823                0.005981
+         all2all gigabitethernet      64       torus           0.000911   dragonfly           0.038462     torus    4123.106008                0.037551
+         all2all gigabitethernet      64     estrela           0.006892   dragonfly           0.038462   estrela     458.059144                0.031570
+    pingpongflex      infiniband      16     fattree           0.000014     estrela           0.000018   fattree      24.864089                0.000004
+    pingpongflex      infiniband      16     fattree           0.000014       torus           0.000004     torus      69.765362                0.000010
+    pingpongflex      infiniband      16     fattree           0.000014   dragonfly           0.000012 dragonfly      17.853192                0.000003
+    pingpongflex      infiniband      16     estrela           0.000018       torus           0.000004     torus      75.785962                0.000013
+    pingpongflex      infiniband      16     estrela           0.000018   dragonfly           0.000012 dragonfly      34.211022                0.000006
+    pingpongflex      infiniband      16       torus           0.000004   dragonfly           0.000012     torus     171.697673                0.000007
+          gather gigabitethernet      32   dragonfly           0.050928       torus           0.028394     torus      44.246064                0.022534
+          gather gigabitethernet      32   dragonfly           0.050928     estrela           0.099096 dragonfly      94.581280                0.048168
+          gather gigabitethernet      32   dragonfly           0.050928     fattree           0.053909 dragonfly       5.853966                0.002981
+          gather gigabitethernet      32       torus           0.028394     estrela           0.099096     torus     249.000075                0.070702
+          gather gigabitethernet      32       torus           0.028394     fattree           0.053909     torus      89.859180                0.025515
+          gather gigabitethernet      32     estrela           0.099096     fattree           0.053909   fattree      45.599101                0.045187
+          reduce      infiniband      16   dragonfly           0.000950     fattree           0.000943   fattree       0.739751                0.000007
+          reduce      infiniband      16   dragonfly           0.000950     estrela           0.001152 dragonfly      21.240744                0.000202
+          reduce      infiniband      16   dragonfly           0.000950       torus           0.000565     torus      40.523320                0.000385
+          reduce      infiniband      16     fattree           0.000943     estrela           0.001152   fattree      22.144308                0.000209
+          reduce      infiniband      16     fattree           0.000943       torus           0.000565     torus      40.080061                0.000378
+          reduce      infiniband      16     estrela           0.001152       torus           0.000565     torus      50.943323                0.000587
+       bcastflex gigabitethernet      64       torus           0.001298     fattree           0.001942     torus      49.657166                0.000644
+       bcastflex gigabitethernet      64       torus           0.001298   dragonfly           0.002093     torus      61.334736                0.000796
+       bcastflex gigabitethernet      64       torus           0.001298     estrela           0.007276     torus     460.758444                0.005979
+       bcastflex gigabitethernet      64     fattree           0.001942   dragonfly           0.002093   fattree       7.802881                0.000152
+       bcastflex gigabitethernet      64     fattree           0.001942     estrela           0.007276   fattree     274.695352                0.005334
+       bcastflex gigabitethernet      64   dragonfly           0.002093     estrela           0.007276 dragonfly     247.574526                0.005183
+       bcastflex      infiniband      64   dragonfly           0.000070     estrela           0.000103 dragonfly      47.409483                0.000033
+       bcastflex      infiniband      64   dragonfly           0.000070     fattree           0.000072 dragonfly       1.953497                0.000001
+       bcastflex      infiniband      64   dragonfly           0.000070       torus           0.000024     torus      66.025988                0.000046
+       bcastflex      infiniband      64     estrela           0.000103     fattree           0.000072   fattree      30.836541                0.000032
+       bcastflex      infiniband      64     estrela           0.000103       torus           0.000024     torus      76.952628                0.000080
+       bcastflex      infiniband      64     fattree           0.000072       torus           0.000024     torus      66.676953                0.000048
+    pingpongflex gigabitethernet      32       torus           0.000276     estrela           0.001196     torus     333.267877                0.000920
+    pingpongflex gigabitethernet      32       torus           0.000276     fattree           0.000496     torus      79.786591                0.000220
+    pingpongflex gigabitethernet      32       torus           0.000276   dragonfly           0.000416     torus      50.592755                0.000140
+    pingpongflex gigabitethernet      32     estrela           0.001196     fattree           0.000496   fattree      58.504519                0.000700
+    pingpongflex gigabitethernet      32     estrela           0.001196   dragonfly           0.000416 dragonfly      65.242576                0.000780
+    pingpongflex gigabitethernet      32     fattree           0.000496   dragonfly           0.000416 dragonfly      16.238049                0.000081
+        pingpong gigabitethernet      32     fattree           0.000496   dragonfly           0.000416 dragonfly      16.238325                0.000081
+        pingpong gigabitethernet      32     fattree           0.000496     estrela           0.001196   fattree     140.988868                0.000700
+        pingpong gigabitethernet      32     fattree           0.000496       torus           0.000276     torus      44.378542                0.000220
+        pingpong gigabitethernet      32   dragonfly           0.000416     estrela           0.001196 dragonfly     187.707796                0.000780
+        pingpong gigabitethernet      32   dragonfly           0.000416       torus           0.000276     torus      33.595576                0.000140
+        pingpong gigabitethernet      32     estrela           0.001196       torus           0.000276     torus      76.919491                0.000920
+       bcastflex      infiniband      32     fattree           0.000123       torus           0.000041     torus      66.385104                0.000082
+       bcastflex      infiniband      32     fattree           0.000123     estrela           0.000163   fattree      32.266643                0.000040
+       bcastflex      infiniband      32     fattree           0.000123   dragonfly           0.000111 dragonfly       9.984830                0.000012
+       bcastflex      infiniband      32       torus           0.000041     estrela           0.000163     torus     293.476278                0.000121
+       bcastflex      infiniband      32       torus           0.000041   dragonfly           0.000111     torus     167.783571                0.000069
+       bcastflex      infiniband      32     estrela           0.000163   dragonfly           0.000111 dragonfly      31.944164                0.000052
+         scatter      infiniband      16       torus           0.000216     estrela           0.000935     torus     331.791849                0.000718
+         scatter      infiniband      16       torus           0.000216     fattree           0.000765     torus     253.354461                0.000548
+         scatter      infiniband      16       torus           0.000216   dragonfly           0.000637     torus     194.487922                0.000421
+         scatter      infiniband      16     estrela           0.000935     fattree           0.000765   fattree      18.165555                0.000170
+         scatter      infiniband      16     estrela           0.000935   dragonfly           0.000637 dragonfly      31.798638                0.000297
+         scatter      infiniband      16     fattree           0.000765   dragonfly           0.000637 dragonfly      16.659345                0.000127
+         all2all      infiniband      64       torus           0.000008   dragonfly           0.000192     torus    2441.914817                0.000184
+         all2all      infiniband      64       torus           0.000008     fattree           0.000022     torus     194.920019                0.000015
+         all2all      infiniband      64       torus           0.000008     estrela           0.000082     torus     982.588984                0.000074
+         all2all      infiniband      64   dragonfly           0.000192     fattree           0.000022   fattree      88.397722                0.000170
+         all2all      infiniband      64   dragonfly           0.000192     estrela           0.000082   estrela      57.410493                0.000110
+         all2all      infiniband      64     fattree           0.000022     estrela           0.000082   fattree     267.078840                0.000059
+          reduce gigabitethernet      16     estrela           0.078454       torus           0.020797     torus      73.491309                0.057657
+          reduce gigabitethernet      16     estrela           0.078454     fattree           0.034387   fattree      56.169765                0.044068
+          reduce gigabitethernet      16     estrela           0.078454   dragonfly           0.030163 dragonfly      61.553834                0.048292
+          reduce gigabitethernet      16       torus           0.020797     fattree           0.034387     torus      65.342889                0.013590
+          reduce gigabitethernet      16       torus           0.020797   dragonfly           0.030163     torus      45.032308                0.009365
+          reduce gigabitethernet      16     fattree           0.034387   dragonfly           0.030163 dragonfly      12.283916                0.004224
+         scatter gigabitethernet      64     fattree           0.028546   dragonfly           0.082232   fattree     188.062062                0.053685
+         scatter gigabitethernet      64     fattree           0.028546     estrela           0.140356   fattree     391.673439                0.111809
+         scatter gigabitethernet      64     fattree           0.028546       torus           0.030147   fattree       5.605615                0.001600
+         scatter gigabitethernet      64   dragonfly           0.082232     estrela           0.140356 dragonfly      70.683163                0.058124
+         scatter gigabitethernet      64   dragonfly           0.082232       torus           0.030147     torus      63.339284                0.052085
+         scatter gigabitethernet      64     estrela           0.140356       torus           0.030147     torus      78.521188                0.110209
+    pingpongflex      infiniband      32       torus           0.000005     fattree           0.000019     torus     268.571071                0.000014
+    pingpongflex      infiniband      32       torus           0.000005     estrela           0.000018     torus     242.983636                0.000013
+    pingpongflex      infiniband      32       torus           0.000005   dragonfly           0.000016     torus     205.184444                0.000011
+    pingpongflex      infiniband      32     fattree           0.000019     estrela           0.000018   estrela       6.942334                0.000001
+    pingpongflex      infiniband      32     fattree           0.000019   dragonfly           0.000016 dragonfly      17.197939                0.000003
+    pingpongflex      infiniband      32     estrela           0.000018   dragonfly           0.000016 dragonfly      11.020699                0.000002
+         scatter      infiniband      64       torus           0.000330     fattree           0.000966     torus     193.077563                0.000637
+         scatter      infiniband      64       torus           0.000330   dragonfly           0.000945     torus     186.732797                0.000616
+         scatter      infiniband      64       torus           0.000330     estrela           0.001284     torus     289.372374                0.000954
+         scatter      infiniband      64     fattree           0.000966   dragonfly           0.000945 dragonfly       2.164876                0.000021
+         scatter      infiniband      64     fattree           0.000966     estrela           0.001284   fattree      32.856426                0.000318
+         scatter      infiniband      64   dragonfly           0.000945     estrela           0.001284 dragonfly      35.796246                0.000338
+          gather gigabitethernet      64     estrela           0.140455       torus           0.047588     torus      66.118651                0.092867
+          gather gigabitethernet      64     estrela           0.140455     fattree           0.088199   fattree      37.204574                0.052256
+          gather gigabitethernet      64     estrela           0.140455   dragonfly           0.091908 dragonfly      34.564225                0.048547
+          gather gigabitethernet      64       torus           0.047588     fattree           0.088199     torus      85.339214                0.040611
+          gather gigabitethernet      64       torus           0.047588   dragonfly           0.091908     torus      93.132143                0.044320
+          gather gigabitethernet      64     fattree           0.088199   dragonfly           0.091908   fattree       4.204684                0.003708
+          gather gigabitethernet      16   dragonfly           0.030245     fattree           0.034744 dragonfly      14.877770                0.004500
+          gather gigabitethernet      16   dragonfly           0.030245       torus           0.020806     torus      31.206230                0.009438
+          gather gigabitethernet      16   dragonfly           0.030245     estrela           0.078491 dragonfly     159.521889                0.048247
+          gather gigabitethernet      16     fattree           0.034744       torus           0.020806     torus      40.115682                0.013938
+          gather gigabitethernet      16     fattree           0.034744     estrela           0.078491   fattree     125.911323                0.043747
+          gather gigabitethernet      16       torus           0.020806     estrela           0.078491     torus     277.246211                0.057685
+           bcast      infiniband      32     estrela           0.000166   dragonfly           0.000109 dragonfly      34.575490                0.000057
+           bcast      infiniband      32     estrela           0.000166       torus           0.000051     torus      69.200844                0.000115
+           bcast      infiniband      32     estrela           0.000166     fattree           0.000123   fattree      26.245164                0.000044
+           bcast      infiniband      32   dragonfly           0.000109       torus           0.000051     torus      52.924133                0.000058
+           bcast      infiniband      32   dragonfly           0.000109     fattree           0.000123 dragonfly      12.732730                0.000014
+           bcast      infiniband      32       torus           0.000051     fattree           0.000123     torus     139.470319                0.000071
+          reduce      infiniband      64       torus           0.000730     fattree           0.001505     torus     106.219753                0.000775
+          reduce      infiniband      64       torus           0.000730   dragonfly           0.001555     torus     113.068822                0.000825
+          reduce      infiniband      64       torus           0.000730     estrela           0.001383     torus      89.555127                0.000653
+          reduce      infiniband      64     fattree           0.001505   dragonfly           0.001555   fattree       3.321248                0.000050
+          reduce      infiniband      64     fattree           0.001505     estrela           0.001383   estrela       8.081004                0.000122
+          reduce      infiniband      64   dragonfly           0.001555     estrela           0.001383   estrela      11.035728                0.000172
+          reduce gigabitethernet      64     fattree           0.088231     estrela           0.140418   fattree      59.148023                0.052187
+          reduce gigabitethernet      64     fattree           0.088231   dragonfly           0.091900   fattree       4.158546                0.003669
+          reduce gigabitethernet      64     fattree           0.088231       torus           0.047632     torus      46.014397                0.040599
+          reduce gigabitethernet      64     estrela           0.140418   dragonfly           0.091900 dragonfly      34.552410                0.048518
+          reduce gigabitethernet      64     estrela           0.140418       torus           0.047632     torus      66.078370                0.092786
+          reduce gigabitethernet      64   dragonfly           0.091900       torus           0.047632     torus      48.169781                0.044268
+         scatter      infiniband      32     fattree           0.000958   dragonfly           0.000841 dragonfly      12.187323                0.000117
+         scatter      infiniband      32     fattree           0.000958       torus           0.000233     torus      75.681415                0.000725
+         scatter      infiniband      32     fattree           0.000958     estrela           0.001081   fattree      12.875842                0.000123
+         scatter      infiniband      32   dragonfly           0.000841       torus           0.000233     torus      72.306294                0.000608
+         scatter      infiniband      32   dragonfly           0.000841     estrela           0.001081 dragonfly      28.541625                0.000240
+         scatter      infiniband      32       torus           0.000233     estrela           0.001081     torus     364.154648                0.000848
+        pingpong gigabitethernet      64     fattree           0.000492       torus           0.000322     torus      34.621986                0.000170
+        pingpong gigabitethernet      64     fattree           0.000492   dragonfly           0.000434 dragonfly      11.712970                0.000058
+        pingpong gigabitethernet      64     fattree           0.000492     estrela           0.001196   fattree     143.141545                0.000704
+        pingpong gigabitethernet      64       torus           0.000322   dragonfly           0.000434     torus      35.040855                0.000113
+        pingpong gigabitethernet      64       torus           0.000322     estrela           0.001196     torus     271.901087                0.000874
+        pingpong gigabitethernet      64   dragonfly           0.000434     estrela           0.001196 dragonfly     175.398942                0.000762
+          gather      infiniband      64   dragonfly           0.001346     fattree           0.001557 dragonfly      15.647647                0.000211
+          gather      infiniband      64   dragonfly           0.001346     estrela           0.001446 dragonfly       7.388918                0.000099
+          gather      infiniband      64   dragonfly           0.001346       torus           0.000830     torus      38.323299                0.000516
+          gather      infiniband      64     fattree           0.001557     estrela           0.001446   estrela       7.141285                0.000111
+          gather      infiniband      64     fattree           0.001557       torus           0.000830     torus      46.668434                0.000727
+          gather      infiniband      64     estrela           0.001446       torus           0.000830     torus      42.566978                0.000615
+          gather      infiniband      32   dragonfly           0.001336     estrela           0.001360 dragonfly       1.761344                0.000024
+          gather      infiniband      32   dragonfly           0.001336       torus           0.000681     torus      49.025393                0.000655
+          gather      infiniband      32   dragonfly           0.001336     fattree           0.001409 dragonfly       5.428840                0.000073
+          gather      infiniband      32     estrela           0.001360       torus           0.000681     torus      49.907691                0.000679
+          gather      infiniband      32     estrela           0.001360     fattree           0.001409   estrela       3.604017                0.000049
+          gather      infiniband      32       torus           0.000681     fattree           0.001409     torus     106.826193                0.000728
+          reduce gigabitethernet      32       torus           0.028103   dragonfly           0.050718     torus      80.468269                0.022614
+          reduce gigabitethernet      32       torus           0.028103     fattree           0.054045     torus      92.309558                0.025942
+          reduce gigabitethernet      32       torus           0.028103     estrela           0.099089     torus     252.587537                0.070986
+          reduce gigabitethernet      32   dragonfly           0.050718     fattree           0.054045 dragonfly       6.561425                0.003328
+          reduce gigabitethernet      32   dragonfly           0.050718     estrela           0.099089 dragonfly      95.373702                0.048371
+          reduce gigabitethernet      32     fattree           0.054045     estrela           0.099089   fattree      83.343740                0.045044
+           bcast      infiniband      16     estrela           0.000255   dragonfly           0.000159 dragonfly      37.585019                0.000096
+           bcast      infiniband      16     estrela           0.000255     fattree           0.000185   fattree      27.481190                0.000070
+           bcast      infiniband      16     estrela           0.000255       torus           0.000077     torus      69.735636                0.000178
+           bcast      infiniband      16   dragonfly           0.000159     fattree           0.000185 dragonfly      16.188147                0.000026
+           bcast      infiniband      16   dragonfly           0.000159       torus           0.000077     torus      51.511059                0.000082
+           bcast      infiniband      16     fattree           0.000185       torus           0.000077     torus      58.266878                0.000108
+           bcast      infiniband      64   dragonfly           0.000073     fattree           0.000072   fattree       2.202883                0.000002
+           bcast      infiniband      64   dragonfly           0.000073       torus           0.000024     torus      66.737135                0.000049
+           bcast      infiniband      64   dragonfly           0.000073     estrela           0.000104 dragonfly      41.506979                0.000030
+           bcast      infiniband      64     fattree           0.000072       torus           0.000024     torus      65.987888                0.000047
+           bcast      infiniband      64     fattree           0.000072     estrela           0.000104   fattree      44.694428                0.000032
+           bcast      infiniband      64       torus           0.000024     estrela           0.000104     torus     325.420292                0.000079
+    pingpongflex gigabitethernet      16     estrela           0.001196   dragonfly           0.000312 dragonfly      73.941550                0.000884
+    pingpongflex gigabitethernet      16     estrela           0.001196       torus           0.000232     torus      80.566841                0.000963
+    pingpongflex gigabitethernet      16     estrela           0.001196     fattree           0.000375   fattree      68.606046                0.000820
+    pingpongflex gigabitethernet      16   dragonfly           0.000312       torus           0.000232     torus      25.424733                0.000079
+    pingpongflex gigabitethernet      16   dragonfly           0.000312     fattree           0.000375 dragonfly      20.475136                0.000064
+    pingpongflex gigabitethernet      16       torus           0.000232     fattree           0.000375     torus      61.548382                0.000143
+       bcastflex gigabitethernet      16     fattree           0.004732     estrela           0.017887   fattree     277.981893                0.013154
+       bcastflex gigabitethernet      16     fattree           0.004732   dragonfly           0.004682 dragonfly       1.057975                0.000050
+       bcastflex gigabitethernet      16     fattree           0.004732       torus           0.003154     torus      33.354203                0.001578
+       bcastflex gigabitethernet      16     estrela           0.017887   dragonfly           0.004682 dragonfly      73.823607                0.013205
+       bcastflex gigabitethernet      16     estrela           0.017887       torus           0.003154     torus      82.367992                0.014733
+       bcastflex gigabitethernet      16   dragonfly           0.004682       torus           0.003154     torus      32.641567                0.001528
+    pingpongflex gigabitethernet      64     estrela           0.001196       torus           0.000322     torus      73.111110                0.000874
+    pingpongflex gigabitethernet      64     estrela           0.001196     fattree           0.000492   fattree      58.871099                0.000704
+    pingpongflex gigabitethernet      64     estrela           0.001196   dragonfly           0.000434 dragonfly      63.689030                0.000762
+    pingpongflex gigabitethernet      64       torus           0.000322     fattree           0.000492     torus      52.958716                0.000170
+    pingpongflex gigabitethernet      64       torus           0.000322   dragonfly           0.000434     torus      35.040789                0.000113
+    pingpongflex gigabitethernet      64     fattree           0.000492   dragonfly           0.000434 dragonfly      11.714224                0.000058
+         scatter gigabitethernet      32     estrela           0.099081   dragonfly           0.041786 dragonfly      57.826024                0.057295
+         scatter gigabitethernet      32     estrela           0.099081     fattree           0.026221   fattree      73.535403                0.072860
+         scatter gigabitethernet      32     estrela           0.099081       torus           0.018940     torus      80.884620                0.080141
+         scatter gigabitethernet      32   dragonfly           0.041786     fattree           0.026221   fattree      37.248987                0.015565
+         scatter gigabitethernet      32   dragonfly           0.041786       torus           0.018940     torus      54.674939                0.022847
+         scatter gigabitethernet      32     fattree           0.026221       torus           0.018940     torus      27.769993                0.007282
+    pingpongflex      infiniband      64       torus           0.000006     estrela           0.000018     torus     191.092768                0.000012
+    pingpongflex      infiniband      64       torus           0.000006     fattree           0.000019     torus     209.740489                0.000013
+    pingpongflex      infiniband      64       torus           0.000006   dragonfly           0.000016     torus     171.210835                0.000010
+    pingpongflex      infiniband      64     estrela           0.000018     fattree           0.000019   estrela       6.406109                0.000001
+    pingpongflex      infiniband      64     estrela           0.000018   dragonfly           0.000016 dragonfly       6.830102                0.000001
+    pingpongflex      infiniband      64     fattree           0.000019   dragonfly           0.000016 dragonfly      12.439334                0.000002
+         all2all gigabitethernet      16       torus           0.000289     estrela           0.001937     torus     570.708199                0.001648
+         all2all gigabitethernet      16       torus           0.000289   dragonfly           0.002991     torus     935.838194                0.002702
+         all2all gigabitethernet      16       torus           0.000289     fattree           0.000612     torus     111.846336                0.000323
+         all2all gigabitethernet      16     estrela           0.001937   dragonfly           0.002991   estrela      54.439471                0.001054
+         all2all gigabitethernet      16     estrela           0.001937     fattree           0.000612   fattree      68.414530                0.001325
+         all2all gigabitethernet      16   dragonfly           0.002991     fattree           0.000612   fattree      79.548318                0.002379
+          reduce      infiniband      32       torus           0.000568     fattree           0.001336     torus     135.336676                0.000769
+          reduce      infiniband      32       torus           0.000568   dragonfly           0.001295     torus     127.950100                0.000727
+          reduce      infiniband      32       torus           0.000568     estrela           0.001384     torus     143.749670                0.000816
+          reduce      infiniband      32     fattree           0.001336   dragonfly           0.001295 dragonfly       3.138727                0.000042
+          reduce      infiniband      32     fattree           0.001336     estrela           0.001384   fattree       3.574876                0.000048
+          reduce      infiniband      32   dragonfly           0.001295     estrela           0.001384 dragonfly       6.931153                0.000090
+        pingpong      infiniband      16       torus           0.000004   dragonfly           0.000012     torus     169.477444                0.000007
+        pingpong      infiniband      16       torus           0.000004     estrela           0.000018     torus     312.120506                0.000013
+        pingpong      infiniband      16       torus           0.000004     fattree           0.000014     torus     229.901390                0.000010
+        pingpong      infiniband      16   dragonfly           0.000012     estrela           0.000018 dragonfly      52.933210                0.000006
+        pingpong      infiniband      16   dragonfly           0.000012     fattree           0.000014 dragonfly      22.422636                0.000003
+        pingpong      infiniband      16     estrela           0.000018     fattree           0.000014   fattree      19.950261                0.000004
+         scatter gigabitethernet      16       torus           0.013724     fattree           0.032536     torus     137.070416                0.018812
+         scatter gigabitethernet      16       torus           0.013724     estrela           0.078435     torus     471.503119                0.064711
+         scatter gigabitethernet      16       torus           0.013724   dragonfly           0.024675     torus      79.790526                0.010951
+         scatter gigabitethernet      16     fattree           0.032536     estrela           0.078435   fattree     141.068932                0.045899
+         scatter gigabitethernet      16     fattree           0.032536   dragonfly           0.024675 dragonfly      24.161551                0.007861
+         scatter gigabitethernet      16     estrela           0.078435   dragonfly           0.024675 dragonfly      68.540762                0.053760
+        pingpong      infiniband      32     fattree           0.000019       torus           0.000005     torus      72.868665                0.000014
+        pingpong      infiniband      32     fattree           0.000019     estrela           0.000018   estrela       6.934375                0.000001
+        pingpong      infiniband      32     fattree           0.000019   dragonfly           0.000016 dragonfly      17.201800                0.000003
+        pingpong      infiniband      32       torus           0.000005     estrela           0.000018     torus     243.018962                0.000013
+        pingpong      infiniband      32       torus           0.000005   dragonfly           0.000016     torus     205.175543                0.000011
+        pingpong      infiniband      32     estrela           0.000018   dragonfly           0.000016 dragonfly      11.032457                0.000002
+        pingpong      infiniband      64       torus           0.000006     estrela           0.000018     torus     191.615967                0.000012
+        pingpong      infiniband      64       torus           0.000006     fattree           0.000019     torus     210.252385                0.000013
+        pingpong      infiniband      64       torus           0.000006   dragonfly           0.000016     torus     171.590062                0.000010
+        pingpong      infiniband      64     estrela           0.000018     fattree           0.000019   estrela       6.390740                0.000001
+        pingpong      infiniband      64     estrela           0.000018   dragonfly           0.000016 dragonfly       6.867219                0.000001
+        pingpong      infiniband      64     fattree           0.000019   dragonfly           0.000016 dragonfly      12.461572                0.000002
+       bcastflex      infiniband      16       torus           0.000067     estrela           0.000255     torus     277.625729                0.000187
+       bcastflex      infiniband      16       torus           0.000067     fattree           0.000166     torus     146.233574                0.000099
+       bcastflex      infiniband      16       torus           0.000067   dragonfly           0.000155     torus     129.732240                0.000088
+       bcastflex      infiniband      16     estrela           0.000255     fattree           0.000166   fattree      34.794280                0.000089
+       bcastflex      infiniband      16     estrela           0.000255   dragonfly           0.000155 dragonfly      39.164039                0.000100
+       bcastflex      infiniband      16     fattree           0.000166   dragonfly           0.000155 dragonfly       6.701496                0.000011
+           bcast gigabitethernet      32     estrela           0.011317     fattree           0.003275   fattree      71.063539                0.008042
+           bcast gigabitethernet      32     estrela           0.011317   dragonfly           0.003029 dragonfly      73.233058                0.008288
+           bcast gigabitethernet      32     estrela           0.011317       torus           0.002126     torus      81.211422                0.009191
+           bcast gigabitethernet      32     fattree           0.003275   dragonfly           0.003029 dragonfly       7.497528                0.000246
+           bcast gigabitethernet      32     fattree           0.003275       torus           0.002126     torus      35.069539                0.001148
+           bcast gigabitethernet      32   dragonfly           0.003029       torus           0.002126     torus      29.806783                0.000903
